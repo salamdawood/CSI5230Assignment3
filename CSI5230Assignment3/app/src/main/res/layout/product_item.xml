@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@+id/productImage"
+        android:text="Product Name"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/priceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:text="Price"
+        android:layout_alignBottom="@+id/productImage"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$00.00"
+        android:textSize="24sp"
+        android:layout_toRightOf="@+id/priceText"
+        android:layout_alignBottom="@+id/productImage"
+        android:layout_marginLeft="16dp"/>
+
+    <ImageButton
+        android:id="@+id/editButton"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/productImage"
+        android:layout_toLeftOf="@+id/trashButton"
+        android:background="@drawable/edit_icon"/>
+
+    <ImageButton
+        android:id="@+id/trashButton"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/productImage"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/trashicon"
+        android:onClick="removeItem" />
+
+</RelativeLayout>
